@@ -1,0 +1,88 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+
+:root {
+  --india-navy: #0F3D6B;
+  --india-saffron: #FF9933;
+  --india-green: #138808;
+}
+
+* {
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
+}
+
+body {
+  font-family: 'Inter', system-ui, sans-serif;
+  background: #F8FAFC;
+  min-height: 100dvh;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #F1F5F9;
+}
+::-webkit-scrollbar-thumb {
+  background: #CBD5E1;
+  border-radius: 3px;
+}
+
+/* Progress bar shimmer */
+@keyframes shimmer {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+
+.progress-shimmer {
+  background: linear-gradient(
+    90deg,
+    #FF9933 0%,
+    #FFB347 40%,
+    #FF9933 60%,
+    #e8841c 100%
+  );
+  background-size: 200% 100%;
+  animation: shimmer 1.5s infinite;
+}
+
+/* Tricolor top bar */
+.tricolor-bar {
+  background: linear-gradient(
+    to right,
+    #FF9933 33.33%,
+    #FFFFFF 33.33%,
+    #FFFFFF 66.66%,
+    #138808 66.66%
+  );
+}
+
+/* Card hover */
+.card-hover {
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.card-hover:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 40px rgba(15, 61, 107, 0.15);
+}
+
+/* Stepper line */
+.stepper-line {
+  background: linear-gradient(to bottom, #FF9933, #0F3D6B);
+}
+
+/* Image overlay gradient */
+.image-name-bar {
+  background: linear-gradient(
+    to top,
+    rgba(15, 45, 107, 0.95) 0%,
+    rgba(15, 45, 107, 0.7) 60%,
+    transparent 100%
+  );
+}
